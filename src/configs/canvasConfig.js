@@ -1,5 +1,6 @@
 class canvasConfig{
     constructor(){
+        super()
         //#region Inicia o canvas
         this.canvas = document.getElementById('canvasId')
         this.render = this.canvas.getContext("2d")
