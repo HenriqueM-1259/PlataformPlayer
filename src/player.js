@@ -21,10 +21,19 @@ class player extends playerConfig{
     isMove(tecla){
         console.log(tecla.a)
         if(tecla.a == true){
-            this.pos.X -=1
+            this.pos.X -= this.velocity * 1.5
         }
         if(tecla.d == true){
-            this.pos.X +=1
+            this.pos.X += this.velocity * 1.5
+            
+        }
+        if(tecla.w == true){
+            this.pos.Y -= this.velocity * 1.5
+            
+        }
+        if(tecla.s == true){
+            this.pos.Y += this.velocity * 1.5
+            
         }
     }
        

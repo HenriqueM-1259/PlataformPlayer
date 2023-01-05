@@ -7,5 +7,6 @@ class playerConfig extends canvasConfig{
         this.leght = {
             X:40,Y:40
         }
+        this.velocity = 10
     }
 }
