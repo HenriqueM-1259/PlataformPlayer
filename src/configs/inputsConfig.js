@@ -1,7 +1,8 @@
+var teclaAll = new teclaConfig()
 class inputsConfig {
     UpdateInput() {
-        var teclaAll = new teclaConfig()
         window.onkeyup = function (e) {
+           
             if (e.key == 'a') {
                 teclaAll.tecla.press.a = false
             }
@@ -14,7 +15,6 @@ class inputsConfig {
             if (e.key == 'w') {
                 teclaAll.tecla.press.w = false
             }
-
         }
 
         window.onkeypress = function (e) {
@@ -32,7 +32,8 @@ class inputsConfig {
                 teclaAll.tecla.press.w = true
             }
         }
-        return teclaAll
+
+        return teclaAll.tecla.press
     }
 
 }
