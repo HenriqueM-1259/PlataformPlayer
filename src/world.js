@@ -3,17 +3,18 @@ class world extends worldConfig{
         super()
         this.fase = fase
         this.player = player
+        
     }
 
     Update(){
         this.player.Update()
-        this.fase.Update()
+       // this.fase.Update()
     }
 
     Draw(){
         
         this.player.Drawn()
-        this.fase.Drawn()
+        //this.fase.Drawn()
     }
 
 }
