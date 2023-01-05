@@ -1,18 +1,6 @@
 class inputsConfig {
-    constructor() {
-        this.tecla = new teclaConfig();
-    }
-
-    UpdateTecla(tecla){
-        console.log(tecla)
-        if(tecla != null){
-            debugger
-            this.tecla = tecla
-        }
-       
-    }
     UpdateInput() {
-        var teclaAll = null
+        var teclaAll = new teclaConfig()
         window.onkeyup = function (e) {
             if (e.key == 'a') {
                 teclaAll.tecla.press.a = false
@@ -30,7 +18,7 @@ class inputsConfig {
         }
 
         window.onkeypress = function (e) {
-            teclaAll = new teclaConfig()
+           
             if (e.key == 'a') {
                 teclaAll.tecla.press.a = true
             }
@@ -44,11 +32,7 @@ class inputsConfig {
                 teclaAll.tecla.press.w = true
             }
         }
-
-        
-            
-        
-         
+        return teclaAll
     }
 
 }

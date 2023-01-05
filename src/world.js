@@ -6,7 +6,6 @@ class world extends worldConfig{
     }
 
     Update(){
-
         this.fase.Update()
         this.player.Update()
     }
@@ -15,4 +14,5 @@ class world extends worldConfig{
         this.fase.Drawn()
         this.player.Drawn()
     }
+
 }
