@@ -7,12 +7,13 @@ class world extends worldConfig{
     }
 
     Update(){
+        
         this.player.Update()
        // this.fase.Update()
     }
 
     Draw(){
-        
+        this.render.save()
         this.player.Drawn()
         //this.fase.Drawn()
     }

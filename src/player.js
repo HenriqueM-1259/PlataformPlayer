@@ -4,21 +4,21 @@ class player extends playerConfig{
         super()
         this.color = color
         this.Inputs = new inputsConfig()
-        this.image = new Image()
-        this.image.src = "./src/img/Player/Idller.png"
+        this.playerSprite = new playerSpriteConfig()
     }
 
     
     Update(){
         this.isMove(this.Inputs.UpdateInput())
-        console.log(this.image)
+        this.playerSprite.Update(this)
     }
 
     Drawn(){
         this.render.clearRect(0,0,window.innerWidth,window.innerHeight)
-        this.render.fillStyle =  this.color
-        this.render.drawImage(this.image,30, 40, 55, 62, this.pos.X,this.pos.Y, 55, 65)
-        //this.render.fillRect(this.pos.X,this.pos.Y,this.leght.X,this.leght.Y) 
+       
+      /*  this.render.fillStyle = 'red'
+        this.render.fillRect(this.pos.X,this.pos.Y,this.leght.X,this.leght.Y)*/
+        this.playerSprite.Drawn()
     }
 
     isMove(tecla){
