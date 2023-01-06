@@ -34,10 +34,9 @@ class playerSpriteConfig extends canvasConfig {
         try {
 
             if (this.player.tecla.w) {
-               // this.frame.Y += 1
+
             } else {
                 this.image.src = "./src/img/Player/PlayerDefault.png"
-                //this.frame.Y = 1
             }
             if (this.player.tecla.a) {
                 this.image.src = "./src/img/Player/PlayerIdller.png"
@@ -50,7 +49,6 @@ class playerSpriteConfig extends canvasConfig {
                 this.image.src = "./src/img/Player/PlayerIdller.png"
                 this.frame.Y = 2
             }
-            console.log(this.player.tecla)
         } catch (error) {
 
         }
@@ -63,8 +61,6 @@ class playerSpriteConfig extends canvasConfig {
         } catch (error) {
 
         }
-
-
 
     }
 }
