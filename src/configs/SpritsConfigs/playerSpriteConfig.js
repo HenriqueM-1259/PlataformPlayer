@@ -3,7 +3,7 @@ class playerSpriteConfig extends canvasConfig{
         super()
         this.player = player
         this.image = new Image()
-        this.image.src = "./src/img/Player/Player.png"
+        this.image.src = "./src/img/Player/PlayerDefault.png"
         this.pos = {
             X:0,Y:0
         }
@@ -24,7 +24,7 @@ class playerSpriteConfig extends canvasConfig{
     }
 
     Drawn(){
-        this.render.drawImage(this.image,64 * this.frame.X, 64 * this.frame.Y, 64, 64, this.pos.X,this.pos.Y,64, 64)
+        this.render.drawImage(this.image,1, 64 * this.frame.Y, 100, 10, this.pos.X,this.pos.Y,10, 10)
     }
 
     isPlayerMoveSprite(){
@@ -35,7 +35,10 @@ class playerSpriteConfig extends canvasConfig{
             
             if(this.player.tecla.w){
                 this.frame.Y += 1
-            }else this.frame.Y = 1
+            }else{
+               // this.image.src = "./src/img/Player/PlayerDefault.png"
+                this.frame.Y = 1
+            } 
             if(this.player.tecla.a){
                 this.invertframe()
                 this.frame.Y = 2
