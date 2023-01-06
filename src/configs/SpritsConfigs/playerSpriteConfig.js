@@ -3,7 +3,7 @@ class playerSpriteConfig extends canvasConfig {
         super()
         this.player = player
         this.image = new Image()
-        this.image.src = "./src/img/Player/PlayerDefault.png"
+        this.image.src = ""
         this.pos = {
             X: 0, Y: 0
         }
@@ -37,7 +37,7 @@ class playerSpriteConfig extends canvasConfig {
                // this.frame.Y += 1
             } else {
                 this.image.src = "./src/img/Player/PlayerDefault.png"
-                this.frame.Y = 1
+                //this.frame.Y = 1
             }
             if (this.player.tecla.a) {
                 this.image.src = "./src/img/Player/PlayerIdller.png"
