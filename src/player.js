@@ -4,13 +4,13 @@ class player extends playerConfig{
         super()
         this.color = color
         this.Inputs = new inputsConfig()
-        this.playerSprite = new playerSpriteConfig()
+        this.playerSprite = new playerSpriteConfig(this)
+        this.tecla = new teclaConfig()
     }
-
-    
+  
     Update(){
         this.isMove(this.Inputs.UpdateInput())
-        this.playerSprite.Update(this)
+        this.playerSprite.Update()
     }
 
     Drawn(){
@@ -22,7 +22,8 @@ class player extends playerConfig{
     }
 
     isMove(tecla){
-        console.log(tecla.a)
+        this.tecla = new teclaConfig()
+        this.tecla = tecla
         if(tecla.a == true){
             this.pos.X -= this.velocity * 1.5
         }
@@ -38,6 +39,7 @@ class player extends playerConfig{
             this.pos.Y += this.velocity * 1.5
             
         }
+        
     }
        
        
