@@ -36,17 +36,18 @@ class playerSpriteConfig extends canvasConfig {
             if (this.player.tecla.w) {
                // this.frame.Y += 1
             } else {
-                // this.image.src = "./src/img/Player/PlayerDefault.png"
-                //this.frame.Y = 1
+                this.image.src = "./src/img/Player/PlayerDefault.png"
+                this.frame.Y = 1
             }
             if (this.player.tecla.a) {
-                //this.image.src = "./src/img/Player/PlayerDefault.png"
+                this.image.src = "./src/img/Player/PlayerIdller.png"
                 this.frame.Y = 200
             }
             if (this.player.tecla.s) {
                 this.frame.Y += 1
             }
             if (this.player.tecla.d) {
+                this.image.src = "./src/img/Player/PlayerIdller.png"
                 this.frame.Y = 2
             }
             console.log(this.player.tecla)
