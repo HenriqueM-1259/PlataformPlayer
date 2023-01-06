@@ -3,7 +3,7 @@ class playerSpriteConfig extends canvasConfig {
         super()
         this.player = player
         this.image = new Image()
-        this.image.src = ""
+        this.image.src = "./src/img/Player/PlayerDefault.png"
         this.pos = {
             X: 0, Y: 0
         }
@@ -14,6 +14,7 @@ class playerSpriteConfig extends canvasConfig {
             X: 1,
             Y: 1
         }
+        this.quantidadeFrame = 10;
         this.FrameFunction = setInterval(() => {
             this.isFrame()
         }, 100);
@@ -24,9 +25,9 @@ class playerSpriteConfig extends canvasConfig {
     }
 
     Drawn() {
-        this.render.drawImage(this.image, 64 * this.frame.X, 1* this.frame.Y, 64, 64, this.pos.X, this.pos.Y, 64, 64)
+        this.render.drawImage(this.image, 64 * this.frame.X, 1* this.frame.Y, 64, 66, this.pos.X, this.pos.Y, 100, 105)
     }
-
+    
     isPlayerMoveSprite() {
         this.pos = this.player.pos
     }
@@ -35,20 +36,22 @@ class playerSpriteConfig extends canvasConfig {
 
             if (this.player.tecla.w) {
 
-            } else {
-                this.image.src = "./src/img/Player/PlayerDefault.png"
             }
+
             if (this.player.tecla.a) {
+                this.quantidadeFrame = 10
                 this.image.src = "./src/img/Player/PlayerIdller.png"
                 this.frame.Y = 200
-            }
-            if (this.player.tecla.s) {
-                this.frame.Y += 1
-            }
+            }else this.image.src = "./src/img/Player/PlayerDefault.png"
+
             if (this.player.tecla.d) {
+                this.quantidadeFrame = 10
                 this.image.src = "./src/img/Player/PlayerIdller.png"
-                this.frame.Y = 2
+                this.frame.Y = 1
             }
+
+            
+          
         } catch (error) {
 
         }
@@ -57,7 +60,7 @@ class playerSpriteConfig extends canvasConfig {
 
         try {
             this.frame.X += 1
-            if (this.frame.X >= 10) this.frame.X = 1  
+            if (this.frame.X >= this.quantidadeFrame) this.frame.X = 1  
         } catch (error) {
 
         }

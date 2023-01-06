@@ -5,7 +5,7 @@ class playerConfig extends playerSpriteConfig{
             X:0,Y:0
         }
         this.leght = {
-            X:64,Y:50
+            X:70,Y:75
         }
         this.velocity = 10
     }
