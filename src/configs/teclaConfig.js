@@ -5,7 +5,8 @@ class teclaConfig{
                 w: false,
                 a: false,
                 s: false,
-                d: false
+                d: false,
+                f:false
             }
         }
     }

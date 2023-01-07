@@ -6,7 +6,7 @@ class fase extends canvasConfig{
     }
     
     Update(){
-        
+
     }
 
     Drawn(){
@@ -17,7 +17,7 @@ class fase extends canvasConfig{
         
     }
     addPlataforms(){
-        this.elementPlataform.push(new plataformaBasica({X:10,Y:400},{X:50,Y:50}))
-        this.elementPlataform.push(new plataformaBasica({X:10*8,Y:400},{X:50,Y:50}))
+        this.elementPlataform.push(new plataformaBasica({X:10,Y:400},{X:500,Y:50}))
+        this.elementPlataform.push(new plataformaBasica({X:10*8,Y:270},{X:50,Y:50}))
     }
 }

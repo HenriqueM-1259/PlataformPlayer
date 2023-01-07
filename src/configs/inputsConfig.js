@@ -15,6 +15,9 @@ class inputsConfig {
             if (e.key == 'w') {
                 teclaAll.tecla.press.w = false
             }
+            if (e.key == 'f') {
+                teclaAll.tecla.press.f = false
+            }
         }
 
         window.onkeypress = function (e) {
@@ -30,6 +33,9 @@ class inputsConfig {
             }
             if (e.key == 'w') {
                 teclaAll.tecla.press.w = true
+            }
+            if (e.key == 'f') {
+                teclaAll.tecla.press.f = true
             }
         }
 

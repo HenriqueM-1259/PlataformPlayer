@@ -7,15 +7,20 @@ class world extends worldConfig{
     }
 
     Update(){
-        
+        this.isColliders()
         this.player.Update()
         this.fase.Update()
+       
     }
 
     Draw(){
         this.render.save()
         this.player.Drawn()
         this.fase.Drawn()
+    }
+
+    isColliders(){
+        this.player.isColliderPrataform(this.fase.elementPlataform)
     }
 
 }

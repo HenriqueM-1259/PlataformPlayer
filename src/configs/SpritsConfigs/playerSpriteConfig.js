@@ -7,7 +7,7 @@ class playerSpriteConfig extends canvasConfig {
         this.pos = {
             X: 0, Y: 0
         }
-        this.lenght = {
+        this.length = {
             X: 64, Y: 64
         }
         this.frame = {
