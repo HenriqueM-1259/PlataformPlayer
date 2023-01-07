@@ -70,8 +70,8 @@ class player extends playerConfig{
     Drawn(){
         this.render.clearRect(0,0,window.innerWidth,window.innerHeight)
        
-        this.render.fillStyle = 'red'
-        this.render.fillRect(this.pos.X,this.pos.Y,this.length.X,this.length.Y)
+        //this.render.fillStyle = 'red'
+        //this.render.fillRect(this.pos.X,this.pos.Y,this.length.X,this.length.Y)
         this.playerSprite.Drawn()
     }
     jump() {
