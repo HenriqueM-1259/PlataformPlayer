@@ -3,6 +3,7 @@ class canvasConfig{
         //#region Inicia o canvas
         this.canvas = document.getElementById('canvasId')
         this.render = this.canvas.getContext("2d")
+        this._GRAVIDADE = 2.5
         this.configure()
         //#endregion
 

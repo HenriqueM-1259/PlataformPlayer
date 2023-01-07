@@ -6,13 +6,29 @@ class player extends playerConfig{
         this.Inputs = new inputsConfig()
         this.playerSprite = new playerSpriteConfig(this)
         this.tecla = new teclaConfig()
-        this.gravidade = 3
     }
   
     Update(){
-        this.isGravity()
+        this.applyGravity();
+        this.updatePlayerPosition();
+        this.PP();
         this.isMove(this.Inputs.UpdateInput())
         this.playerSprite.Update()
+    }
+
+    //Implementacao da gravidade
+    updatePlayerPosition(){
+        this.pos.Y += this.velocity;
+    }
+
+    applyGravity(){
+        this.velocity += this._GRAVIDADE
+    }
+
+    PP(){
+        if(this.pos.Y + this.leght.Y > window.innerHeight){
+            this.pos.Y = window.innerHeight - this.leght.Y
+        }
     }
 
     Drawn(){
@@ -22,34 +38,28 @@ class player extends playerConfig{
         //this.render.fillRect(this.pos.X,this.pos.Y,this.leght.X,this.leght.Y)
         this.playerSprite.Drawn()
     }
-
-    isGravity(){
-        if(!(this.leght.Y + this.pos.Y >= window.innerHeight)){
-            this.gravidade =3
-            this.pos.Y += this.velocity * this.gravidade + 1
+    jump() {
+        debugger
+        if (this.pos.Y + this.leght.Y >= window.innerHeight) {
+            this.velocity = -20;
         }
-        else{
-            this.gravidade = 0
-        }
+      }
 
-    }
     isMove(tecla){
         this.tecla = new teclaConfig()
         this.tecla = tecla
         if(tecla.a == true){
-            this.pos.X -= this.velocity * 1.5
+            this.pos.X -= 15
         }
         if(tecla.d == true){
-            this.pos.X += this.velocity * 1.5
+            this.pos.X += 15
             
         }
         if(tecla.w == true){
-            if(this.gravidade == 0){
-                this.pos.Y -= (this.velocity * 15)
-            }
+           this.jump()
         }
         if(tecla.s == true){
-            this.pos.Y += this.velocity * 1.5
+           
             
         }
         

@@ -7,6 +7,6 @@ class playerConfig extends playerSpriteConfig{
         this.leght = {
             X:70,Y:75
         }
-        this.velocity = 10
+        this.velocity = 0
     }
 }
