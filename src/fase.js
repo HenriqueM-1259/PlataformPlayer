@@ -1,15 +1,23 @@
 class fase extends canvasConfig{
     constructor(){
         super()
+        this.elementPlataform = []
+        this.addPlataforms();
     }
     
     Update(){
-
+        
     }
 
     Drawn(){
+        this.elementPlataform.forEach((obj) => {
+            obj.Drawn()
+            //console.log(obj)
+        })
         
-        this.render.fillStyle =  "blue"
-        this.render.fillRect(10,10,20,20) 
+    }
+    addPlataforms(){
+        this.elementPlataform.push(new plataformaBasica({X:10,Y:400},{X:50,Y:50}))
+        this.elementPlataform.push(new plataformaBasica({X:10*8,Y:400},{X:50,Y:50}))
     }
 }
