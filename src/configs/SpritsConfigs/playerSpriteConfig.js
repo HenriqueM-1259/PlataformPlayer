@@ -39,22 +39,40 @@ class playerSpriteConfig extends canvasConfig {
             }
 
             if (this.player.tecla.a) {
+                console.log(this.frame.Y)
                 this.quantidadeFrame = 10
                 this.image.src = "./src/img/Player/PlayerIdller.png"
                 this.frame.Y = 200
-            }else this.image.src = "./src/img/Player/PlayerDefault.png"
+            }//else this.image.src = "./src/img/Player/PlayerDefault.png"
 
             if (this.player.tecla.d) {
                 this.quantidadeFrame = 10
                 this.image.src = "./src/img/Player/PlayerIdller.png"
                 this.frame.Y = 1
             }
+            if (this.player.tecla.f) {
+                
+                    this.quantidadeFrame = 10
+                    this.image.src = "./src/img/Player/PlayerDash.png"
+                    //this.frame.Y = 1 
+                    this.player.frameSetX = this.frame.X;
+                
+               
+            }
 
+            if(!(this.player.tecla.w) && !(this.player.tecla.a) 
+            && !(this.player.tecla.s) && !(this.player.tecla.d )
+                && !(this.player.tecla.f) ){
+                this.image.src = "./src/img/Player/PlayerDefault.png"
+            }
             
           
         } catch (error) {
 
         }
+    }
+    DashTrue(){
+       
     }
     isFrame(frame) {
 

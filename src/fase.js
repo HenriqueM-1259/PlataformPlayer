@@ -3,7 +3,7 @@ class fase extends canvasConfig{
         super()
         this.ListPlataformMap = [{0: new plataformaBasica({X:10,Y:200},{X:150,Y:20})},
             {0: new plataformaBasica({X:300,Y:200},{X:150,Y:20})},
-            {0: new plataformaMove({X:600,Y:200},{X:150,Y:20})}
+            {0: new plataformaMoveX({X:600,Y:200},{X:150,Y:20})}
            
         ]
     }

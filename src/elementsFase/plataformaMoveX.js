@@ -1,4 +1,4 @@
-class plataformaMove extends plataformaBasica {
+class plataformaMoveX extends plataformaBasica {
 
     constructor(pos,length){
         super(pos,length)

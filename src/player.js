@@ -7,6 +7,9 @@ class player extends playerConfig{
         this.playerSprite = new playerSpriteConfig(this)
         this.tecla = new teclaConfig()
         this.isJump = null;
+        this.teclaPositionView =  new teclaConfig()
+            
+        
     }
   
     Update(){
@@ -48,9 +51,13 @@ class player extends playerConfig{
         this.tecla = new teclaConfig()
         this.tecla = tecla
         if(tecla.a == true){
+            this.teclaPositionView.tecla.press.a = true
+            this.teclaPositionView.tecla.press.d = false
             this.pos.X -= 15
         }
         if(tecla.d == true){
+            this.teclaPositionView.tecla.press.a = false
+            this.teclaPositionView.tecla.press.d = true
             this.pos.X += 15
         }
         if(tecla.w == true){
@@ -60,8 +67,26 @@ class player extends playerConfig{
            
             
         }
-        
+        if(tecla.f == true){
+            console.log(this.frame)
+            if(this.frame.X == 9){
+                this.isTeleporte()
+            }
+                
+            
+                
+        }
+       
     }
        
+    isTeleporte(){
+        if(this.teclaPositionView.tecla.press.a){
+            this.pos.X -= 300 
+            console.log(this.frameSetX)
+        }else if(this.teclaPositionView.tecla.press.d){
+            this.pos.X += 300 * 0.5
+            console.log(this.frameSetX)
+        }
        
+    }
 }
