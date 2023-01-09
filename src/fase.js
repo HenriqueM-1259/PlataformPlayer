@@ -2,8 +2,9 @@ class fase extends canvasConfig{
     constructor(){
         super()
         this.ListPlataformMap = [{0: new plataformaBasica({X:10,Y:200},{X:150,Y:20})},
-            {0: new plataformaBasica({X:300,Y:200},{X:150,Y:20})},
-            {0: new plataformaMoveX({X:600,Y:200},{X:150,Y:20})}
+            {0: new plataformaMoveX({X:300,Y:200},{X:150,Y:20})},
+            //{0: new plataformaMoveX({X:600,Y:200},{X:150,Y:20})},
+            {0: new plataformaMoveY({X:600,Y:300},{X:150,Y:20})}
            
         ]
     }
@@ -14,6 +15,7 @@ class fase extends canvasConfig{
         this.ListPlataformMap[i][0].Update()
         
        }
+      
     }
 
     Drawn(){
