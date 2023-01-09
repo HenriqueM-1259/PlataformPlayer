@@ -7,6 +7,7 @@ class elementConfig extends canvasConfig{
         this.length = {
             X:length.X,Y:length.Y
         }
+        
     }
 
 }

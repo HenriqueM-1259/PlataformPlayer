@@ -16,8 +16,8 @@ class playerSpriteConfig extends canvasConfig {
         }
         this.quantidadeFrame = 10;
         this.FrameFunction = setInterval(() => {
-            this.isFrame()
-        }, 100);
+           this.isFrame()
+       }, 100);
     }
     Update() {
         this.setFrame()
@@ -25,7 +25,7 @@ class playerSpriteConfig extends canvasConfig {
     }
 
     Drawn() {
-        this.render.drawImage(this.image, 64 * this.frame.X, 1* this.frame.Y, 64, 66, this.pos.X, this.pos.Y, 100, 105)
+        this.render.drawImage(this.image, 64* this.frame.X, 1* this.frame.Y, 64, 66, this.pos.X - 25, this.pos.Y, 100, 100)
     }
     
     isPlayerMoveSprite() {

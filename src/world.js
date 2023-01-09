@@ -3,24 +3,29 @@ class world extends worldConfig{
         super()
         this.fase = fase
         this.player = player
-        
+        this.colider = new coliderConfig()
     }
 
     Update(){
-        this.isColliders()
         this.player.Update()
         this.fase.Update()
+        
+        for (let i = 0; i < this.fase.ListPlataformMap.length; i++) {
+            if(this.colider.CollisionDetectionPlayerPlataform(this.player,this.fase.ListPlataformMap[i][0])){
+                this.player.pos.Y = this.fase.ListPlataformMap[i][0].pos.Y - this.player.length.Y
+                this.player.velocity = 0
+            }
+               // this.player.velocity = -20
+            
+            
+        }
+        
        
     }
 
     Draw(){
-        this.render.save()
         this.player.Drawn()
         this.fase.Drawn()
-    }
-
-    isColliders(){
-        this.player.isColliderPrataform(this.fase.elementPlataform)
     }
 
 }
