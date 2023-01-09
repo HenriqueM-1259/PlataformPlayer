@@ -6,6 +6,7 @@ class player extends playerConfig{
         this.Inputs = new inputsConfig()
         this.playerSprite = new playerSpriteConfig(this)
         this.tecla = new teclaConfig()
+        this.isJump = null;
     }
   
     Update(){
@@ -34,8 +35,12 @@ class player extends playerConfig{
         this.playerSprite.Drawn()
     }
     jump() {
-       
+        
+       if(this.isJump){
+        this.isJump = false
         this.velocity = -20
+       }
+        
     }
 
     isMove(tecla){

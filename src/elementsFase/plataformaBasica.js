@@ -1,10 +1,10 @@
 class plataformaBasica extends elementConfig{
-    constructor(pos,length,player){
+    constructor(pos,length){
        super(pos,length)
     }
 
     Update(){
-      
+
     }
 
     Drawn(){
