@@ -24,9 +24,9 @@ class plataformaBasicaSpriteConfig extends canvasConfig {
             let pulaDrawn = 10 * i
           
              if(i > 1){
-                this.render.drawImage(this.image, 3420,200 , 64, 64, this.plataform.pos.X + pulaDrawn, this.plataform.pos.Y, 32, 32)
+                this.render.drawImage(this.image, 3420,200 , 128, 128, this.plataform.pos.X + pulaDrawn, this.plataform.pos.Y, 32, 32)
             }else if (i <= 1){
-                this.render.drawImage(this.image, 3420,200 , 64, 64, this.plataform.pos.X + pulaDrawn, this.plataform.pos.Y, 32, 32)
+                this.render.drawImage(this.image, 3420,200 , 128, 128, this.plataform.pos.X + pulaDrawn, this.plataform.pos.Y, 32, 32)
             }
             
         }
