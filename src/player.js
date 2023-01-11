@@ -82,10 +82,10 @@ class player extends playerConfig{
     isTeleporte(){
         if(this.teclaPositionView.tecla.press.a){
             this.pos.X -= 300 
-            console.log(this.frameSetX)
+           // console.log(this.frameSetX)
         }else if(this.teclaPositionView.tecla.press.d){
             this.pos.X += 300 * 0.5
-            console.log(this.frameSetX)
+            //console.log(this.frameSetX)
         }
        
     }

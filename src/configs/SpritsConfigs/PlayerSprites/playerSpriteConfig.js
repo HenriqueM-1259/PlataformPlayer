@@ -39,7 +39,7 @@ class playerSpriteConfig extends canvasConfig {
             }
 
             if (this.player.tecla.a) {
-                console.log(this.frame.Y)
+               // console.log(this.frame.Y)
                 this.quantidadeFrame = 10
                 this.image.src = "./src/img/Player/PlayerIdller.png"
                 this.frame.Y = 200
